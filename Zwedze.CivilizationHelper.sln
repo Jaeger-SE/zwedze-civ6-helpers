@@ -10,6 +10,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "domain", "domain", "{6AE7BB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "clients", "clients", "{B3750330-71AB-43BA-BCEB-16C65EFD8742}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_solution-items", "_solution-items", "{57977F10-D93D-4998-B5C7-4DA6262C8B85}"
+	ProjectSection(SolutionItems) = preProject
+		azure-pipelines.yml = azure-pipelines.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "frameworks", "frameworks", "{5D35F8C2-E072-4CF1-B1B0-4816BE795FDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zwedze.Framework.Blazor.Reactive", "frameworks\Zwedze.Framework.Blazor.Reactive\Zwedze.Framework.Blazor.Reactive.csproj", "{9B87EC7A-2570-4D64-AEF2-5A3EB04A5012}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,10 +37,15 @@ Global
 		{60FFE63A-CCFC-487B-A1D2-504D0E87D2EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60FFE63A-CCFC-487B-A1D2-504D0E87D2EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60FFE63A-CCFC-487B-A1D2-504D0E87D2EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B87EC7A-2570-4D64-AEF2-5A3EB04A5012}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B87EC7A-2570-4D64-AEF2-5A3EB04A5012}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B87EC7A-2570-4D64-AEF2-5A3EB04A5012}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B87EC7A-2570-4D64-AEF2-5A3EB04A5012}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A709FF36-EEEE-4671-88B4-3FB94242B485} = {6AE7BBF3-5DF8-4A5A-99D6-808B81AB0A5C}
 		{2F2A5A9C-8AF1-48C9-9FDB-4CA55BFC44A6} = {6AE7BBF3-5DF8-4A5A-99D6-808B81AB0A5C}
 		{60FFE63A-CCFC-487B-A1D2-504D0E87D2EE} = {B3750330-71AB-43BA-BCEB-16C65EFD8742}
+		{9B87EC7A-2570-4D64-AEF2-5A3EB04A5012} = {5D35F8C2-E072-4CF1-B1B0-4816BE795FDC}
 	EndGlobalSection
 EndGlobal

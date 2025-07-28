@@ -4,6 +4,7 @@
         <TargetFramework>net9.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
 
     <ItemGroup>
@@ -23,10 +24,10 @@
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
-        <PackageReference Include="Zwedze.Framework.Blazor.Reactive" Version="0.1.18" />
     </ItemGroup>
 
     <ItemGroup>
+        <ProjectReference Include="..\..\frameworks\Zwedze.Framework.Blazor.Reactive\Zwedze.Framework.Blazor.Reactive.csproj" />
         <ProjectReference Include="..\Zwedze.CivilizationHelper\Zwedze.CivilizationHelper.csproj"/>
     </ItemGroup>
 
@@ -34,6 +35,12 @@
         <Compile Update="**/*ViewModel.cs">
             <DependentUpon>$([System.String]::Copy('%(Filename)').Replace('ViewModel', '')).razor</DependentUpon>
         </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
     </ItemGroup>
 
 </Project>
