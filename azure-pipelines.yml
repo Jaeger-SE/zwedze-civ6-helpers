@@ -24,6 +24,7 @@ steps:
       azureSubscription: 'esteban-goffaux-private(07d3d7bb-be7d-4b62-9910-0a4cecd731d1)'
       command: 'publish'
       publishWebProjects: true
+      arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
 
   - task: PublishBuildArtifacts@1
     displayName: Push artifacts
