@@ -5,13 +5,21 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+  - task: UseDotNet@2
+    displayName: Use .net 9.x
+    inputs:
+      packageType: 'sdk'
+      version: '9.x'
+
   - task: DotNetCoreCLI@2
+    displayName: Build Blazor Wasm
     inputs:
       azureSubscription: 'esteban-goffaux-private(07d3d7bb-be7d-4b62-9910-0a4cecd731d1)'
       command: 'build'
       projects: '**/Zwedze.CivilizationHelper.Host.BlazorWasm.csproj'
 
   - task: DotNetCoreCLI@2
+    displayName: Publish Blazor Wasm
     inputs:
       azureSubscription: 'esteban-goffaux-private(07d3d7bb-be7d-4b62-9910-0a4cecd731d1)'
       command: 'publish'
