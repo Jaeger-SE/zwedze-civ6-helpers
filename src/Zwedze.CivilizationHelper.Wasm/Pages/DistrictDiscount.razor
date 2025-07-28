@@ -1,0 +1,9 @@
+@page "/"
+@page "/district-discount"
+@using Zwedze.Framework.Blazor.Reactive.SubscriptionManager
+
+@inject ISubscriptionManagerFactory SubscriptionManagerFactory
+
+<CascadingValue Value="_subscriptionManager">
+    <DistrictList/>
+</CascadingValue>

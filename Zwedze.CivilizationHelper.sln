@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zwedze.CivilizationHelper.UnitTest", "tests\Zwedze.CivilizationHelper.UnitTest\Zwedze.CivilizationHelper.UnitTest.csproj", "{2F2A5A9C-8AF1-48C9-9FDB-4CA55BFC44A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zwedze.CivilizationHelper", "src\Zwedze.CivilizationHelper\Zwedze.CivilizationHelper.csproj", "{A709FF36-EEEE-4671-88B4-3FB94242B485}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zwedze.CodeGenerator", "src\Zwedze.CodeGenerator\Zwedze.CodeGenerator.csproj", "{CD8DB421-96FA-4D6C-BA01-4AD9EE2513DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zwedze.CodeGenerator.Attributes", "src\Zwedze.CodeGenerator.Attributes\Zwedze.CodeGenerator.Attributes.csproj", "{0D60BD16-2766-4EB5-9678-7B84089AC9E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "code_generators", "code_generators", "{16AC8F80-55C5-4E8F-B54D-C9F48370BB7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zwedze.CivilizationHelper.Wasm", "src\Zwedze.CivilizationHelper.Wasm\Zwedze.CivilizationHelper.Wasm.csproj", "{60FFE63A-CCFC-487B-A1D2-504D0E87D2EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F2A5A9C-8AF1-48C9-9FDB-4CA55BFC44A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F2A5A9C-8AF1-48C9-9FDB-4CA55BFC44A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F2A5A9C-8AF1-48C9-9FDB-4CA55BFC44A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F2A5A9C-8AF1-48C9-9FDB-4CA55BFC44A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A709FF36-EEEE-4671-88B4-3FB94242B485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A709FF36-EEEE-4671-88B4-3FB94242B485}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A709FF36-EEEE-4671-88B4-3FB94242B485}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A709FF36-EEEE-4671-88B4-3FB94242B485}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD8DB421-96FA-4D6C-BA01-4AD9EE2513DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD8DB421-96FA-4D6C-BA01-4AD9EE2513DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD8DB421-96FA-4D6C-BA01-4AD9EE2513DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD8DB421-96FA-4D6C-BA01-4AD9EE2513DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D60BD16-2766-4EB5-9678-7B84089AC9E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D60BD16-2766-4EB5-9678-7B84089AC9E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D60BD16-2766-4EB5-9678-7B84089AC9E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D60BD16-2766-4EB5-9678-7B84089AC9E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60FFE63A-CCFC-487B-A1D2-504D0E87D2EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60FFE63A-CCFC-487B-A1D2-504D0E87D2EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60FFE63A-CCFC-487B-A1D2-504D0E87D2EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60FFE63A-CCFC-487B-A1D2-504D0E87D2EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0D60BD16-2766-4EB5-9678-7B84089AC9E0} = {16AC8F80-55C5-4E8F-B54D-C9F48370BB7C}
+		{CD8DB421-96FA-4D6C-BA01-4AD9EE2513DF} = {16AC8F80-55C5-4E8F-B54D-C9F48370BB7C}
+	EndGlobalSection
+EndGlobal

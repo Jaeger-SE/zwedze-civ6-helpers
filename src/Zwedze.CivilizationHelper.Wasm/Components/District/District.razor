@@ -1,0 +1,54 @@
+@inject IDistrictViewModelFactory DistrictViewModelFactory
+
+@if (_vm.IsDetailViewOpened)
+{
+    <MudItem xs="12">
+        <div class="d-flex align-stretch cursor-pointer relative mx-2">
+            <div class="flex-1 d-flex flex-column gap-6">
+                <MudButton FullWidth="true" Variant="Variant.Filled"
+                           StartIcon="@Icons.Material.Filled.Download"
+                           Color="Color.Info" Size="Size.Small"
+                           Class="full-height"
+                           @onclick="_vm.Place">PLACE
+                </MudButton>
+
+                <MudButton FullWidth="true" Variant="Variant.Filled"
+                           StartIcon="@Icons.Material.Filled.Block"
+                           Color="Color.Error" Size="Size.Small"
+                           Class="full-height"
+                           Disabled="!_vm.CanUnplace"
+                           @onclick="_vm.Unplace">UNPLACE
+                </MudButton>
+            </div>
+            <DistrictCrest DistrictKey="DistrictKey"/>
+            <div class="flex-1 d-flex flex-column gap-6">
+                <MudButton FullWidth="true" Variant="Variant.Filled"
+                           StartIcon="@Icons.Material.Filled.Upload"
+                           Color="Color.Success" Size="Size.Small"
+                           Class="full-height"
+                           @onclick="_vm.Complete">DONE
+                </MudButton>
+
+                <MudButton FullWidth="true" Variant="Variant.Filled"
+                           StartIcon="@Icons.Material.Filled.Cancel"
+                           Color="Color.Error" Size="Size.Small"
+                           Class="full-height"
+                           Disabled="!_vm.CanRemove"
+                           @onclick="_vm.Destroy">DESTROY
+                </MudButton>
+            </div>
+        </div>
+    </MudItem>
+}
+else
+{
+    <MudItem xs="6">
+        <div class="d-flex align-center justify-center cursor-pointer relative">
+            <DistrictCrest DistrictKey="DistrictKey"/>
+            <div class="open-btn absolute z-100 w-max" @onclick="@_vm.OpenDetail"
+                 @onlongpress="@(() => _vm.ToggleUnlock())"></div>
+        </div>
+    </MudItem>
+}
+
+
