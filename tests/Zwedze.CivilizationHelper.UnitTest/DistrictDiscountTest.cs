@@ -24,12 +24,12 @@ internal class DistrictDiscountTest
         // Arrange
         _unlockedDistricts.Count.Returns(4);
         _playerDistricts.GetTotalCompletedDistrictsCount().Returns(5);
-        _playerDistricts.GetPlacedCountFor(DistrictKeys.CommercialHub).Returns(0);
-        _playerDistricts.GetPlacedCountFor(DistrictKeys.HolySite).Returns(2);
-        _playerDistricts.GetPlacedCountFor(DistrictKeys.Campus).Returns(2);
-        _playerDistricts.GetPlacedCountFor(DistrictKeys.GovernmentPlaza).Returns(1);
+        _playerDistricts.GetPlacedCountFor(SpecialityDistricts.CommercialHub).Returns(0);
+        _playerDistricts.GetPlacedCountFor(SpecialityDistricts.HolySite).Returns(2);
+        _playerDistricts.GetPlacedCountFor(SpecialityDistricts.Campus).Returns(2);
+        _playerDistricts.GetPlacedCountFor(SpecialityDistricts.GovernmentPlaza).Returns(1);
         // Act
-        var hasDiscount = _dut.HasDiscountFor(DistrictKeys.CommercialHub);
+        var hasDiscount = _dut.HasDiscountFor(SpecialityDistricts.CommercialHub);
         // Assert
         Assert.That(hasDiscount, Is.True);
     }
@@ -40,12 +40,12 @@ internal class DistrictDiscountTest
         // Arrange
         _unlockedDistricts.Count.Returns(4);
         _playerDistricts.GetTotalCompletedDistrictsCount().Returns(6);
-        _playerDistricts.GetPlacedCountFor(DistrictKeys.CommercialHub).Returns(1);
-        _playerDistricts.GetPlacedCountFor(DistrictKeys.HolySite).Returns(2);
-        _playerDistricts.GetPlacedCountFor(DistrictKeys.Campus).Returns(2);
-        _playerDistricts.GetPlacedCountFor(DistrictKeys.GovernmentPlaza).Returns(1);
+        _playerDistricts.GetPlacedCountFor(SpecialityDistricts.CommercialHub).Returns(1);
+        _playerDistricts.GetPlacedCountFor(SpecialityDistricts.HolySite).Returns(2);
+        _playerDistricts.GetPlacedCountFor(SpecialityDistricts.Campus).Returns(2);
+        _playerDistricts.GetPlacedCountFor(SpecialityDistricts.GovernmentPlaza).Returns(1);
         // Act
-        var hasDiscount = _dut.HasDiscountFor(DistrictKeys.CommercialHub);
+        var hasDiscount = _dut.HasDiscountFor(SpecialityDistricts.CommercialHub);
         // Assert
         Assert.That(hasDiscount, Is.True);
     }
@@ -56,12 +56,12 @@ internal class DistrictDiscountTest
         // Arrange
         _unlockedDistricts.Count.Returns(4);
         _playerDistricts.GetTotalCompletedDistrictsCount().Returns(7);
-        _playerDistricts.GetPlacedCountFor(DistrictKeys.CommercialHub).Returns(2);
-        _playerDistricts.GetPlacedCountFor(DistrictKeys.HolySite).Returns(2);
-        _playerDistricts.GetPlacedCountFor(DistrictKeys.Campus).Returns(2);
-        _playerDistricts.GetPlacedCountFor(DistrictKeys.GovernmentPlaza).Returns(1);
+        _playerDistricts.GetPlacedCountFor(SpecialityDistricts.CommercialHub).Returns(2);
+        _playerDistricts.GetPlacedCountFor(SpecialityDistricts.HolySite).Returns(2);
+        _playerDistricts.GetPlacedCountFor(SpecialityDistricts.Campus).Returns(2);
+        _playerDistricts.GetPlacedCountFor(SpecialityDistricts.GovernmentPlaza).Returns(1);
         // Act
-        var hasDiscount = _dut.HasDiscountFor(DistrictKeys.CommercialHub);
+        var hasDiscount = _dut.HasDiscountFor(SpecialityDistricts.CommercialHub);
         // Assert
         Assert.That(hasDiscount, Is.False);
     }
@@ -72,11 +72,11 @@ internal class DistrictDiscountTest
         // Arrange
         _unlockedDistricts.Count.Returns(4);
         _playerDistricts.GetTotalCompletedDistrictsCount().Returns(5);
-        _playerDistricts.GetPlacedCountFor(DistrictKeys.HolySite).Returns(2);
-        _playerDistricts.GetPlacedCountFor(DistrictKeys.Campus).Returns(2);
-        _playerDistricts.GetPlacedCountFor(DistrictKeys.GovernmentPlaza).Returns(1);
+        _playerDistricts.GetPlacedCountFor(SpecialityDistricts.HolySite).Returns(2);
+        _playerDistricts.GetPlacedCountFor(SpecialityDistricts.Campus).Returns(2);
+        _playerDistricts.GetPlacedCountFor(SpecialityDistricts.GovernmentPlaza).Returns(1);
         //Act
-        var hasDiscount = _dut.HasDiscountFor(DistrictKeys.HolySite);
+        var hasDiscount = _dut.HasDiscountFor(SpecialityDistricts.HolySite);
         // Assert
         Assert.That(hasDiscount, Is.False);
     }
@@ -87,11 +87,11 @@ internal class DistrictDiscountTest
         // Arrange
         _unlockedDistricts.Count.Returns(4);
         _playerDistricts.GetTotalCompletedDistrictsCount().Returns(5);
-        _playerDistricts.GetPlacedCountFor(DistrictKeys.HolySite).Returns(2);
-        _playerDistricts.GetPlacedCountFor(DistrictKeys.Campus).Returns(2);
-        _playerDistricts.GetPlacedCountFor(DistrictKeys.GovernmentPlaza).Returns(1);
+        _playerDistricts.GetPlacedCountFor(SpecialityDistricts.HolySite).Returns(2);
+        _playerDistricts.GetPlacedCountFor(SpecialityDistricts.Campus).Returns(2);
+        _playerDistricts.GetPlacedCountFor(SpecialityDistricts.GovernmentPlaza).Returns(1);
         // Act
-        var hasDiscount = _dut.HasDiscountFor(DistrictKeys.Campus);
+        var hasDiscount = _dut.HasDiscountFor(SpecialityDistricts.Campus);
         // Assert
         Assert.That(hasDiscount, Is.False);
     }
@@ -102,7 +102,7 @@ internal class DistrictDiscountTest
         // Arrange
         _unlockedDistricts.Count.Returns(1);
         // Act
-        var hasDiscount = _dut.HasDiscountFor(DistrictKeys.Campus);
+        var hasDiscount = _dut.HasDiscountFor(SpecialityDistricts.Campus);
         // Assert
         Assert.That(hasDiscount, Is.False);
     }
@@ -113,9 +113,9 @@ internal class DistrictDiscountTest
         // Arrange
         _unlockedDistricts.Count.Returns(3);
         _playerDistricts.GetTotalCompletedDistrictsCount().Returns(2);
-        _playerDistricts.GetPlacedCountFor(DistrictKeys.Campus).Returns(2);
+        _playerDistricts.GetPlacedCountFor(SpecialityDistricts.Campus).Returns(2);
         // Act
-        var hasDiscount = _dut.HasDiscountFor(DistrictKeys.Campus);
+        var hasDiscount = _dut.HasDiscountFor(SpecialityDistricts.Campus);
         // Assert
         Assert.That(hasDiscount, Is.False);
     }
@@ -126,9 +126,9 @@ internal class DistrictDiscountTest
         // Arrange
         _unlockedDistricts.Count.Returns(3);
         _playerDistricts.GetTotalCompletedDistrictsCount().Returns(2);
-        _playerDistricts.GetPlacedCountFor(DistrictKeys.Campus).Returns(2);
+        _playerDistricts.GetPlacedCountFor(SpecialityDistricts.Campus).Returns(2);
         // Act
-        var hasDiscount = _dut.HasDiscountFor(DistrictKeys.HolySite);
+        var hasDiscount = _dut.HasDiscountFor(SpecialityDistricts.HolySite);
         // Assert
         Assert.That(hasDiscount, Is.False);
     }

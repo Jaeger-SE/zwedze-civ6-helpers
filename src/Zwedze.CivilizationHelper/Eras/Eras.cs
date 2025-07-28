@@ -3,18 +3,6 @@ using Zwedze.CivilizationHelper.DistrictManagement;
 
 namespace Zwedze.CivilizationHelper.Eras;
 
-internal sealed class Era
-{
-    public Era(int key, string name)
-    {
-        Key = (EraKey)key;
-        Name = name;
-    }
-
-    public EraKey Key { get; }
-    public string Name { get; }
-}
-
 internal static class Eras
 {
     public static readonly Era Ancient = new(1, "Ancient");
@@ -36,11 +24,11 @@ public static class DistrictEra
         {
             return new Dictionary<EraKey, ImmutableArray<DistrictKey>>
                 {
-                    { Eras.Ancient.Key, [DistrictKeys.Campus, DistrictKeys.HolySite, DistrictKeys.Encampment, DistrictKeys.Preserve, DistrictKeys.GovernmentPlaza] },
-                    { Eras.Classical.Key, [DistrictKeys.TheaterSquare, DistrictKeys.CommercialHub, DistrictKeys.Harbor, DistrictKeys.EntertainmentComplex, DistrictKeys.DiplomaticQuarter] },
-                    { Eras.Medieval.Key, [DistrictKeys.IndustrialZone] },
-                    { Eras.Industrial.Key, [DistrictKeys.WaterPark] },
-                    { Eras.Modern.Key, [DistrictKeys.Aerodrome] }
+                    { Eras.Ancient.Key, [SpecialityDistricts.Campus, SpecialityDistricts.HolySite, SpecialityDistricts.Encampment, SpecialityDistricts.Preserve, SpecialityDistricts.GovernmentPlaza] },
+                    { Eras.Classical.Key, [SpecialityDistricts.TheaterSquare, SpecialityDistricts.CommercialHub, SpecialityDistricts.Harbor, SpecialityDistricts.EntertainmentComplex, SpecialityDistricts.DiplomaticQuarter] },
+                    { Eras.Medieval.Key, [SpecialityDistricts.IndustrialZone] },
+                    { Eras.Industrial.Key, [SpecialityDistricts.WaterPark] },
+                    { Eras.Modern.Key, [SpecialityDistricts.Aerodrome] }
                 };
         }
     }

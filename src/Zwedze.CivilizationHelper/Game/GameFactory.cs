@@ -1,5 +1,6 @@
 using Zwedze.CivilizationHelper.DistrictManagement;
 using Zwedze.CivilizationHelper.DistrictManagement.Discount;
+using Zwedze.CivilizationHelper.DistrictManagement.Factories;
 
 namespace Zwedze.CivilizationHelper.Game;
 
@@ -17,6 +18,6 @@ internal sealed class GameFactory : IGameFactory
         var districtDiscount = new DistrictDiscount(playerDistricts, unlockedDistricts);
         var districtFactory = new DistrictFactory(playerDistricts, unlockedDistricts, districtDiscount);
 
-        return new Game(playerDistricts, unlockedDistricts, districtDiscount, districtFactory);
+        return new Game(playerDistricts, unlockedDistricts, districtFactory);
     }
 }

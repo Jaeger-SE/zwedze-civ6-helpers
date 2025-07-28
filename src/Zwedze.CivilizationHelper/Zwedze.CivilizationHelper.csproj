@@ -27,9 +27,4 @@
         <InternalsVisibleTo Include="DynamicProxyGenAssembly2"/>
     </ItemGroup>
 
-    <ItemGroup>
-        <ProjectReference Include="..\Zwedze.CodeGenerator.Attributes\Zwedze.CodeGenerator.Attributes.csproj"/>
-        <ProjectReference Include="..\Zwedze.CodeGenerator\Zwedze.CodeGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
-    </ItemGroup>
-
 </Project>

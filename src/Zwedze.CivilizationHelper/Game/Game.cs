@@ -1,7 +1,7 @@
 ﻿using System.Collections.Immutable;
 using System.Text;
 using Zwedze.CivilizationHelper.DistrictManagement;
-using Zwedze.CivilizationHelper.DistrictManagement.Discount;
+using Zwedze.CivilizationHelper.DistrictManagement.Factories;
 using Zwedze.CivilizationHelper.Eras;
 
 namespace Zwedze.CivilizationHelper.Game;
@@ -21,7 +21,7 @@ public interface IGame
     void Remove(DistrictKey district);
 }
 
-internal sealed class Game(IPlayerDistricts playerDistricts, IUnlockedDistricts unlockedDistricts, IDistrictDiscount districtDiscount, IDistrictFactory districtFactory) : IGame
+internal sealed class Game(IPlayerDistricts playerDistricts, IUnlockedDistricts unlockedDistricts, IDistrictFactory districtFactory) : IGame
 {
     private readonly List<IDistrict> _districts =
     [

@@ -15,8 +15,8 @@ internal sealed class DistrictDiscount(IPlayerDistricts playerDistricts, IUnlock
     {
         SingletonDistricts =
         [
-            DistrictKeys.GovernmentPlaza,
-            DistrictKeys.DiplomaticQuarter
+            SpecialityDistricts.GovernmentPlaza,
+            SpecialityDistricts.DiplomaticQuarter
         ];
     }
 
