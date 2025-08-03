@@ -46,7 +46,7 @@ public sealed class DistrictCrestViewModel
     }
 
     public DistrictKey Key { get; }
-    public string ImagePath => $"/img/districts/{Key}.webp";
+    public string ImagePath => $"/img/districts/{Key}.png";
     public int PlacedCount => _district.PlacedCount;
     public int CompletedCount => _district.CompletedCount;
     public bool IsDiscounted => _district.IsDiscounted;

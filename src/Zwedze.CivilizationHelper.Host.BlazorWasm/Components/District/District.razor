@@ -5,37 +5,33 @@
     <MudItem xs="12">
         <div class="d-flex align-stretch cursor-pointer relative mx-2">
             <div class="flex-1 d-flex flex-column gap-6">
-                <MudButton FullWidth="true" Variant="Variant.Filled"
-                           StartIcon="@Icons.Material.Filled.Download"
+                <MudIconButton Variant="Variant.Filled"
+                           Icon="@Icons.Material.Filled.Download"
                            Color="Color.Info" Size="Size.Small"
-                           Class="full-height"
-                           @onclick="_vm.Place">PLACE
-                </MudButton>
+                           @onclick="_vm.Place">
+                </MudIconButton>
 
-                <MudButton FullWidth="true" Variant="Variant.Filled"
-                           StartIcon="@Icons.Material.Filled.Block"
+                <MudIconButton Variant="Variant.Filled"
+                           Icon="@Icons.Material.Filled.Block"
                            Color="Color.Error" Size="Size.Small"
-                           Class="full-height"
                            Disabled="!_vm.CanUnplace"
-                           @onclick="_vm.Unplace">UNPLACE
-                </MudButton>
+                           @onclick="_vm.Unplace">
+                </MudIconButton>
             </div>
             <DistrictCrest DistrictKey="DistrictKey"/>
             <div class="flex-1 d-flex flex-column gap-6">
-                <MudButton FullWidth="true" Variant="Variant.Filled"
-                           StartIcon="@Icons.Material.Filled.Upload"
+                <MudIconButton FullWidth="true" Variant="Variant.Filled"
+                           Icon="@Icons.Material.Filled.Upload"
                            Color="Color.Success" Size="Size.Small"
-                           Class="full-height"
-                           @onclick="_vm.Complete">DONE
-                </MudButton>
+                           @onclick="_vm.Complete">
+                </MudIconButton>
 
-                <MudButton FullWidth="true" Variant="Variant.Filled"
-                           StartIcon="@Icons.Material.Filled.Cancel"
+                <MudIconButton Variant="Variant.Filled"
+                           Icon="@Icons.Material.Filled.Cancel"
                            Color="Color.Error" Size="Size.Small"
-                           Class="full-height"
                            Disabled="!_vm.CanRemove"
-                           @onclick="_vm.Destroy">DESTROY
-                </MudButton>
+                           @onclick="_vm.Destroy">
+                </MudIconButton>
             </div>
         </div>
     </MudItem>

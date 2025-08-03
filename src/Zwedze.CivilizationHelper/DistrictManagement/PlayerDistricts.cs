@@ -8,6 +8,7 @@ internal interface IPlayerDistricts
     void UnplaceDistrict(DistrictKey district);
     void CompleteDistrict(DistrictKey district);
     void RemoveDistrict(DistrictKey district);
+    void ResetDistricts(DistrictKey district);
     int GetPlacedCountFor(DistrictKey district);
     int GetCompletedCountFor(DistrictKey district);
 }
@@ -60,6 +61,11 @@ internal sealed class PlayerDistricts(IUnlockedDistricts unlockedDistricts) : IP
             throw new InvalidOperationException($"There is no '{district}' district placement completed.");
         }
         _districtsPlacements.Remove(firstFoundCompletePlacement);
+    }
+
+    public void ResetDistricts(DistrictKey district)
+    {
+        _districtsPlacements.RemoveAll(x=>x.District == district);
     }
 
     public int GetPlacedCountFor(DistrictKey district)

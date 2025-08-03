@@ -53,6 +53,7 @@ internal sealed class Game(IPlayerDistricts playerDistricts, IUnlockedDistricts 
     public void Lock(DistrictKey district)
     {
         unlockedDistricts.RemoveDistrict(district);
+        playerDistricts.ResetDistricts(district);
     }
 
     public bool IsUnlocked(DistrictKey district) => unlockedDistricts.IsUnlocked(district);
@@ -76,10 +77,6 @@ internal sealed class Game(IPlayerDistricts playerDistricts, IUnlockedDistricts 
     {
         playerDistricts.RemoveDistrict(district);
     }
-
-    public int GetPlacedCount(DistrictKey district) => playerDistricts.GetPlacedCountFor(district);
-
-    public int GetCompletedCount(DistrictKey district) => playerDistricts.GetCompletedCountFor(district);
 
     public override string ToString()
     {
