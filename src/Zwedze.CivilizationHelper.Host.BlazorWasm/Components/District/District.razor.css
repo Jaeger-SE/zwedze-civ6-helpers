@@ -1,0 +1,10 @@
+.open-btn {
+    width: 100%;
+    height: 100%;
+}
+.align-stretch {
+    align-content: stretch;
+}
+::deep .full-height {
+    height: 100% !important;
+}

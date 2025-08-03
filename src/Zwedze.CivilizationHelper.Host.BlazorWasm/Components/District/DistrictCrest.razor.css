@@ -1,0 +1,25 @@
+.crest.locked .crest-image {
+    filter: grayscale(1);
+}
+.crest.discount {
+    filter: sepia(1);
+}
+.crest-image {
+    width: 128px;
+}
+.crest .counter {
+    color: white;
+    font-weight: bold;
+    font-size: 38px;
+    text-shadow: 0 0 5px black;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+.crest .discount-container {
+    bottom: -1.5rem;
+    right: -.5rem;
+}
+.crest .discount-image {
+    width: 64px;
+}

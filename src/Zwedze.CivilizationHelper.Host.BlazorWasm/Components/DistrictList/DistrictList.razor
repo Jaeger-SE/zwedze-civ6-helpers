@@ -1,0 +1,19 @@
+@inject IDistrictListViewModelFactory DistrictListViewModelFactory
+
+<div class="d-flex align-end justify-start my-4 px-4 gap-10">
+    <MudButton FullWidth="true" Variant="Variant.Filled" Color="Color.Secondary"
+               StartIcon="@Icons.Material.Filled.StopCircle" @onclick="_vm.Reset">Reset
+    </MudButton>
+    <MudButton FullWidth="true" Variant="Variant.Filled" Color="Color.Success" StartIcon="@Icons.Material.Filled.Help"
+               @onclick="_vm.OpenHelp">Help
+    </MudButton>
+</div>
+
+<div class="district-list mx-4 mt-4 mb-4 py-4">
+    <MudGrid Spacing="4" Justify="Justify.Center">
+        @foreach (var districtKey in _vm.Districts)
+        {
+            <District DistrictKey="districtKey" @key="districtKey"/>
+        }
+    </MudGrid>
+</div>
