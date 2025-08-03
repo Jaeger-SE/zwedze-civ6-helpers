@@ -1,0 +1,5 @@
+.district-list {
+    background-color: rgba(217,217,217,.3);
+    backdrop-filter: blur(3px);
+    border: 2px rgba(0,0,0,.5) solid;
+}

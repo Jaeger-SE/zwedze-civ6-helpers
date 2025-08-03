@@ -1,0 +1,15 @@
+@inject IDistrictCrestViewModelFactory DistrictCrestViewModelFactory
+
+<div class="crest @(_vm.IsUnlocked ? "" : "locked") @(_vm.IsDiscounted ? "discount": "") relative d-flex align-center flex-0"
+     @onclick="@_vm.CloseDetail">
+    <img class="crest-image" src="@_vm.ImagePath" alt="@_vm.Key"/>
+    <div class="counter absolute z-10">
+        @_vm.PlacedCount | @_vm.CompletedCount
+    </div>
+    @if (_vm.IsDiscounted)
+    {
+        <div class="discount-container absolute">
+            <img class="discount-image" src="/img/discount.png" alt="has-discount">
+        </div>
+    }
+</div>
